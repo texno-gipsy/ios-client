@@ -41,6 +41,12 @@ class MapView: TK.View<CALayer> {
         setNeedsUpdateConstraints()
     }
     
+    func setCenterToCurrentPosition() {
+        let geoCoodCenter = NMAGeoCoordinates(latitude: currentLattitude,
+                                              longitude: currentLongitude)
+        mapView.set(geoCenter: geoCoodCenter, animation: .none)
+    }
+    
     @objc func didUpdatePosition() {
         guard let position = NMAPositioningManager.sharedInstance().currentPosition else {
             return
@@ -50,16 +56,17 @@ class MapView: TK.View<CALayer> {
             return
         }
         
-        if abs(coordinates.latitude - currentLattitude) + abs(coordinates.longitude - currentLongitude) < 0.1 {
-            return
-        }
+        let distanceScore = abs(coordinates.latitude - currentLattitude) + abs(coordinates.longitude - currentLongitude)
         
         currentLattitude = coordinates.latitude
         currentLongitude = coordinates.longitude
         
-        let geoCoodCenter = NMAGeoCoordinates(latitude: currentLattitude,
-                                              longitude: currentLongitude)
-        mapView.set(geoCenter: geoCoodCenter, animation: .none)
+        if distanceScore < 0.1 {
+            return
+        }
+        
+        setCenterToCurrentPosition()
+        
     }
 
     func setupBindings() {
