@@ -16,6 +16,9 @@ class UIComponents {
     }
 
     lazy var rootVC = RootViewController()
+    lazy var mainView = MainView()
+    lazy var loginView = LoginView()
+    lazy var profileView = ProfileView()
 
-    lazy var mainMapView = MainMapView()
+    lazy var styler = UIStyler()
 }

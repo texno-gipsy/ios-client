@@ -8,10 +8,21 @@
 
 import Foundation
 
-final class ProfileModel {
-    let apiClient: ApiClient
+struct UserCredentials {
+    let id: Int
+}
 
-    init(apiClient: ApiClient) {
-        self.apiClient = apiClient
+final class ProfileModel {
+
+    // Deps:
+    lazy var apiClient = AppComponents.shared.coreComponents.apiClient
+    lazy var userCollectionModel = AppComponents.shared.coreComponents.userCollectionModel
+
+    var user: User?
+    var credentials: UserCredentials?
+
+    func login(credentials: UserCredentials) {
+        self.credentials = credentials
+        user = userCollectionModel.user(id: credentials.id)
     }
 }

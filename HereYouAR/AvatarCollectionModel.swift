@@ -9,14 +9,17 @@
 import UIKit
 
 final class AvatarCollectionModel {
+
+    static let defaultAvatar = UIImage(named: "unknown-avatar")!
+
     static let avatars = [
-        0: UIImage(named: "purtov-avatar")!,
-        1: UIImage(named: "sadovnikov-avatar")!,
-        2: UIImage(named: "tkachenko-avatar")!,
-        3: UIImage(named: "lebedev-avatar")!,
+        1: UIImage(named: "purtov-avatar")!,
+        2: UIImage(named: "sadovnikov-avatar")!,
+        3: UIImage(named: "tkachenko-avatar")!,
+        4: UIImage(named: "lebedev-avatar")!,
     ]
 
     func avatar(for userId: Int) -> UIImage {
-        return Self.avatars[userId]!
+        return Self.avatars[userId] ?? Self.defaultAvatar
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Styler.swift
+//  NewEventModel.swift
 //  HereYouAR
 //
 //  Created by Dmitry Purtov on 26.10.2019.
@@ -8,6 +8,10 @@
 
 import Foundation
 
-class Styler {
+class NewEventModel {
+    var data: EventData?
+}
 
+struct EventData {
+    var name: String
 }

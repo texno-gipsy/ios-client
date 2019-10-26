@@ -43,6 +43,8 @@ extension TK {
 }
 
 extension TK {
+    typealias DefaultView = View<CALayer>
+
     class View<LayerT>: UIView where LayerT: CALayer {
         override init(frame: CGRect) {
             super.init(frame: frame)
@@ -60,41 +62,13 @@ extension TK {
         var customLayer: LayerT {
             return self.layer as! LayerT
         }
-    }
-}
 
-
-extension TK {
-    class Presenter {
-        func show(view: UIView, on parentView: UIView, completion: @escaping () -> Void = {}) -> TK.Disposable.Base {
-//            guard let parentView = parentView ?? UIApplication.shared.keyWindow else {
-//                return TK.fallback(TK.Disposable.Base())
-//            }
-
-            parentView.addSubview(view)
-            view.snp.remakeConstraints {
-                $0.edges.equalTo(0)
-            }
-            parentView.setNeedsLayout()
-            parentView.layoutIfNeeded()
-            completion()
-
-            view.alpha = 0.0
-            view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
-            UIView.animate(withDuration: 0.3, animations: {
-                view.alpha = 1.0
-                view.transform = .identity
-            }) { (_) in }
-
-            return TK.Disposable.Base {
-                [weak view] in
-                guard let view = view else { return }
-                view.alpha = 1.0
-                UIView.animate(withDuration: 0.3, animations: {
-                    view.alpha = 0.0
-                    view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
-                }) { _ in view.removeFromSuperview() }
-            }
+        var state: State = .inactive
+        public enum State {
+            case inactive
+            case activating
+            case active
+            case deactivating
         }
     }
 }

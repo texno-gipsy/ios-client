@@ -13,11 +13,18 @@ class CoreComponents {
     let profileModel: ProfileModel
     let userCollectionModel: UserCollectionModel
     let eventCollectionModel: EventCollectionModel
+    let tagCollectionModel: TagCollectionModel
+    let avatarCollectionModel: AvatarCollectionModel
 
     init() {
         apiClient = ApiClient()
-        profileModel = ProfileModel(apiClient: apiClient)
-        userCollectionModel = UserCollectionModel(apiClient: apiClient)
-        eventCollectionModel = EventCollectionModel(apiClient: apiClient)
+        profileModel = ProfileModel()
+        apiClient.profileModel = profileModel
+
+        userCollectionModel = UserCollectionModel()
+        eventCollectionModel = EventCollectionModel()
+        tagCollectionModel = TagCollectionModel(eventCollectionModel: eventCollectionModel)
+
+        avatarCollectionModel = AvatarCollectionModel()
     }
 }
