@@ -43,8 +43,8 @@ class MapView: TK.View<CALayer> {
 
         // Set initial position
         struct Defaults {
-            static let latitude = 61.494713
-            static let longitude = 23.775360
+            static let latitude = 55.815428
+            static let longitude = 37.575599
         }
 
         let geoCoodCenter = NMAGeoCoordinates(latitude: Defaults.latitude,
