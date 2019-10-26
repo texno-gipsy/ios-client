@@ -14,4 +14,8 @@ class UIComponents {
     init(coreComponents: CoreComponents) {
         self.coreComponents = coreComponents
     }
+
+    lazy var rootVC = RootViewController()
+
+    lazy var mainMapView = MainMapView()
 }

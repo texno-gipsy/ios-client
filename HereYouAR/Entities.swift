@@ -17,3 +17,9 @@ struct Event {
     let id: Int
     let name: String
 }
+
+struct Tag {
+    let id: Int
+    let name: String
+}
+

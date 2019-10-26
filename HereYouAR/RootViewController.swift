@@ -1,5 +1,5 @@
 //
-//  RootVC.swift
+//  RootViewController.swift
 //  HereYouAR
 //
 //  Created by Dmitry Purtov on 26.10.2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RootVC: UIViewController {
+final class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

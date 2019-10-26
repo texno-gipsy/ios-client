@@ -11,8 +11,8 @@
 		340B23032363A43300433E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340B23022363A43300433E6A /* Assets.xcassets */; };
 		340B23062363A43300433E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340B23042363A43300433E6A /* LaunchScreen.storyboard */; };
 		340B23112363A43300433E6A /* HereYouARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B23102363A43300433E6A /* HereYouARTests.swift */; };
-		340B231C2363A55000433E6A /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B231B2363A55000433E6A /* RootVC.swift */; };
-		340B231E2363AE7000433E6A /* MapV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B231D2363AE7000433E6A /* MapV.swift */; };
+		340B231C2363A55000433E6A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B231B2363A55000433E6A /* RootViewController.swift */; };
+		340B231E2363AE7000433E6A /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B231D2363AE7000433E6A /* MainMapView.swift */; };
 		340B23202363AFDF00433E6A /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B231F2363AFDF00433E6A /* Styler.swift */; };
 		340B23242363B16900433E6A /* EventCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B23232363B16900433E6A /* EventCollectionModel.swift */; };
 		340B23262363B1DF00433E6A /* ApiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B23252363B1DF00433E6A /* ApiParser.swift */; };
@@ -25,6 +25,9 @@
 		340B233A2363B8DD00433E6A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B23392363B8DD00433E6A /* Utils.swift */; };
 		342B717E2363BCA700979F34 /* UserCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342B717D2363BCA700979F34 /* UserCollectionModel.swift */; };
 		342B71802363BE3300979F34 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342B717F2363BE3200979F34 /* ApiClient.swift */; };
+		34E98E5C2363CD41009096EB /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5B2363CD41009096EB /* AppController.swift */; };
+		34E98E5E2363DF2D009096EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5D2363DF2D009096EB /* LoginView.swift */; };
+		34E98E602363E051009096EB /* UserCredentialCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */; };
 		506CB737F0B28F34D4F43409 /* libPods-HereYouAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C85BA495138D486232AA9C /* libPods-HereYouAR.a */; };
 		F4699EAC74D1D94E961377A3 /* libPods-HereYouARTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7B61119AF829DF8C105B82 /* libPods-HereYouARTests.a */; };
 /* End PBXBuildFile section */
@@ -48,8 +51,8 @@
 		340B230C2363A43300433E6A /* HereYouARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HereYouARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B23102363A43300433E6A /* HereYouARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereYouARTests.swift; sourceTree = "<group>"; };
 		340B23122363A43300433E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		340B231B2363A55000433E6A /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
-		340B231D2363AE7000433E6A /* MapV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapV.swift; sourceTree = "<group>"; };
+		340B231B2363A55000433E6A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		340B231D2363AE7000433E6A /* MainMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
 		340B231F2363AFDF00433E6A /* Styler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styler.swift; sourceTree = "<group>"; };
 		340B23232363B16900433E6A /* EventCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionModel.swift; sourceTree = "<group>"; };
 		340B23252363B1DF00433E6A /* ApiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiParser.swift; sourceTree = "<group>"; };
@@ -62,6 +65,9 @@
 		340B23392363B8DD00433E6A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		342B717D2363BCA700979F34 /* UserCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionModel.swift; sourceTree = "<group>"; };
 		342B717F2363BE3200979F34 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		34E98E5B2363CD41009096EB /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		34E98E5D2363DF2D009096EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialCollectionModel.swift; sourceTree = "<group>"; };
 		35C85BA495138D486232AA9C /* libPods-HereYouAR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HereYouAR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		995F57510D94EE613EDD42FB /* Pods-HereYouAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.release.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.release.xcconfig"; sourceTree = "<group>"; };
 		B4A474193F3F7ACE811AF41E /* Pods-HereYouAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.debug.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,12 +122,12 @@
 				340B22F92363A43100433E6A /* AppDelegate.swift */,
 				340B23392363B8DD00433E6A /* Utils.swift */,
 				342B71812363C26B00979F34 /* Components */,
-				340B231B2363A55000433E6A /* RootVC.swift */,
-				340B231D2363AE7000433E6A /* MapV.swift */,
+				340B231B2363A55000433E6A /* RootViewController.swift */,
+				340B231D2363AE7000433E6A /* MainMapView.swift */,
+				34E98E5D2363DF2D009096EB /* LoginView.swift */,
 				340B231F2363AFDF00433E6A /* Styler.swift */,
 				340B23372363B5B600433E6A /* Entities.swift */,
 				340B233B2363BAF800433E6A /* Core */,
-				340B232B2363B27E00433E6A /* AvatarCollectionModel.swift */,
 				340B23022363A43300433E6A /* Assets.xcassets */,
 				340B23042363A43300433E6A /* LaunchScreen.storyboard */,
 				340B23072363A43300433E6A /* Info.plist */,
@@ -144,6 +150,8 @@
 				340B23332363B52900433E6A /* ProfileModel.swift */,
 				340B23232363B16900433E6A /* EventCollectionModel.swift */,
 				342B717D2363BCA700979F34 /* UserCollectionModel.swift */,
+				340B232B2363B27E00433E6A /* AvatarCollectionModel.swift */,
+				34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				340B232D2363B4AA00433E6A /* AppComponents.swift */,
+				34E98E5B2363CD41009096EB /* AppController.swift */,
 				340B232F2363B4BC00433E6A /* CoreComponents.swift */,
 				340B23312363B4C900433E6A /* UIComponents.swift */,
 			);
@@ -340,18 +349,21 @@
 				340B23342363B52900433E6A /* ProfileModel.swift in Sources */,
 				340B23202363AFDF00433E6A /* Styler.swift in Sources */,
 				340B23262363B1DF00433E6A /* ApiParser.swift in Sources */,
+				34E98E602363E051009096EB /* UserCredentialCollectionModel.swift in Sources */,
+				34E98E5C2363CD41009096EB /* AppController.swift in Sources */,
 				342B71802363BE3300979F34 /* ApiClient.swift in Sources */,
-				340B231C2363A55000433E6A /* RootVC.swift in Sources */,
+				340B231C2363A55000433E6A /* RootViewController.swift in Sources */,
 				340B23242363B16900433E6A /* EventCollectionModel.swift in Sources */,
 				340B23322363B4C900433E6A /* UIComponents.swift in Sources */,
 				340B232E2363B4AA00433E6A /* AppComponents.swift in Sources */,
 				340B23302363B4BC00433E6A /* CoreComponents.swift in Sources */,
+				34E98E5E2363DF2D009096EB /* LoginView.swift in Sources */,
 				340B233A2363B8DD00433E6A /* Utils.swift in Sources */,
 				340B22FA2363A43100433E6A /* AppDelegate.swift in Sources */,
 				342B717E2363BCA700979F34 /* UserCollectionModel.swift in Sources */,
 				340B232C2363B27E00433E6A /* AvatarCollectionModel.swift in Sources */,
 				340B23382363B5B600433E6A /* Entities.swift in Sources */,
-				340B231E2363AE7000433E6A /* MapV.swift in Sources */,
+				340B231E2363AE7000433E6A /* MainMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
