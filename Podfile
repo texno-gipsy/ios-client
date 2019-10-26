@@ -8,6 +8,7 @@ target 'HereYouAR' do
     pod 'SnapKit', '~> 5'
     pod 'Alamofire', '~> 5.0.0-rc.2'
     pod 'SwiftyJSON', '~> 5'
+    pod 'HEREMaps'
 end
 
 target 'HereYouARTests' do
