@@ -1,15 +1,17 @@
 //
-//  RootVC.swift
+//  ApiClient.swift
 //  HereYouAR
 //
 //  Created by Dmitry Purtov on 26.10.2019.
 //  Copyright © 2019 texno-gipsy. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-final class RootVC: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class ApiClient {
+    let parser: ApiParser
+
+    init() {
+        parser = ApiParser()
     }
 }

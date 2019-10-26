@@ -1,5 +1,5 @@
 //
-//  RootVC.swift
+//  MapV.swift
 //  HereYouAR
 //
 //  Created by Dmitry Purtov on 26.10.2019.
@@ -8,8 +8,6 @@
 
 import UIKit
 
-final class RootVC: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
+
+
+
