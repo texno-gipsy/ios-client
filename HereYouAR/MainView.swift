@@ -22,6 +22,7 @@ class MainView: TK.DefaultView {
     var mapView: MapView!
     var userView: UserView!
     var addEventButton: AddEventButton!
+    var geoCentrationButton: GeoCentrationButton!
 
     init() {
         super.init(frame: .zero)
@@ -37,7 +38,9 @@ class MainView: TK.DefaultView {
         addSubview(mapView)
 
         addEventButton = AddEventButton()
+        geoCentrationButton = GeoCentrationButton()
         addSubview(addEventButton)
+        addSubview(geoCentrationButton)
 
         userView = UserView()
 
@@ -57,6 +60,7 @@ class MainView: TK.DefaultView {
     func setupBindings() {
         eventCollectionModel.refresh()
         addEventButton.action = {}
+        geoCentrationButton.action = mapView.setCenterToCurrentPosition
         userView.user = profileModel.user
     }
 
@@ -69,6 +73,11 @@ class MainView: TK.DefaultView {
         addEventButton.snp.updateConstraints {
             $0.centerX.equalTo(layoutMarginsGuide.snp.centerX)
             $0.bottom.equalTo(layoutMarginsGuide)
+        }
+        
+        geoCentrationButton.snp.updateConstraints {
+            $0.trailing.equalTo(layoutMarginsGuide.snp.trailing).offset(-30)
+            $0.bottom.equalTo(layoutMarginsGuide).offset(-27)
         }
 
         userView.snp.updateConstraints {
