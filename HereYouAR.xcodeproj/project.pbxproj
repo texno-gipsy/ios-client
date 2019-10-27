@@ -10,6 +10,7 @@
 		124AE69623654AF100D5AFEC /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124AE69523654AF100D5AFEC /* EventView.swift */; };
 		12597A9D236508BC004FD4F0 /* GeoCentrationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */; };
 		12597A9F2365100E004FD4F0 /* EventSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12597A9E2365100E004FD4F0 /* EventSearchModel.swift */; };
+		322712E95F204E6869CE38D0 /* libPods-HereYouAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73160F03C5B0199CFBDC09A6 /* libPods-HereYouAR.a */; };
 		340B22FA2363A43100433E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B22F92363A43100433E6A /* AppDelegate.swift */; };
 		340B23032363A43300433E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340B23022363A43300433E6A /* Assets.xcassets */; };
 		340B23062363A43300433E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340B23042363A43300433E6A /* LaunchScreen.storyboard */; };
@@ -55,8 +56,7 @@
 		34E98E5E2363DF2D009096EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5D2363DF2D009096EB /* LoginView.swift */; };
 		34E98E602363E051009096EB /* UserCredentialCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */; };
 		34E98E6223647BBD009096EB /* AddEventButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E6123647BBD009096EB /* AddEventButton.swift */; };
-		506CB737F0B28F34D4F43409 /* libPods-HereYouAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C85BA495138D486232AA9C /* libPods-HereYouAR.a */; };
-		F4699EAC74D1D94E961377A3 /* libPods-HereYouARTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7B61119AF829DF8C105B82 /* libPods-HereYouARTests.a */; };
+		761D1E095A1CE8A739AAF1AD /* libPods-HereYouARTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3E2A32133DD2543EC31EBC /* libPods-HereYouARTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +73,7 @@
 		124AE69523654AF100D5AFEC /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCentrationButton.swift; sourceTree = "<group>"; };
 		12597A9E2365100E004FD4F0 /* EventSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSearchModel.swift; sourceTree = "<group>"; };
+		149231CD4DF9BA5246C0A1DF /* Pods-HereYouAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.debug.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.debug.xcconfig"; sourceTree = "<group>"; };
 		340B22F62363A43100433E6A /* HereYouAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereYouAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B22F92363A43100433E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		340B23022363A43300433E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,12 +123,11 @@
 		34E98E5D2363DF2D009096EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialCollectionModel.swift; sourceTree = "<group>"; };
 		34E98E6123647BBD009096EB /* AddEventButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventButton.swift; sourceTree = "<group>"; };
-		35C85BA495138D486232AA9C /* libPods-HereYouAR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HereYouAR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		995F57510D94EE613EDD42FB /* Pods-HereYouAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.release.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.release.xcconfig"; sourceTree = "<group>"; };
-		B4A474193F3F7ACE811AF41E /* Pods-HereYouAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.debug.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.debug.xcconfig"; sourceTree = "<group>"; };
-		EF7B61119AF829DF8C105B82 /* libPods-HereYouARTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HereYouARTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5C313EF92B397B1979E8713 /* Pods-HereYouARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouARTests.debug.xcconfig"; path = "Target Support Files/Pods-HereYouARTests/Pods-HereYouARTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F85D5B2BF353108CA1B90391 /* Pods-HereYouARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouARTests.release.xcconfig"; path = "Target Support Files/Pods-HereYouARTests/Pods-HereYouARTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A3E2A32133DD2543EC31EBC /* libPods-HereYouARTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HereYouARTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73160F03C5B0199CFBDC09A6 /* libPods-HereYouAR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HereYouAR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81513E2CF787C98255A93E2E /* Pods-HereYouARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouARTests.debug.xcconfig"; path = "Target Support Files/Pods-HereYouARTests/Pods-HereYouARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87C5CC62F8E95E15471AE0A3 /* Pods-HereYouAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.release.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.release.xcconfig"; sourceTree = "<group>"; };
+		FD687613A995F4B51A7F4057 /* Pods-HereYouARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouARTests.release.xcconfig"; path = "Target Support Files/Pods-HereYouARTests/Pods-HereYouARTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				506CB737F0B28F34D4F43409 /* libPods-HereYouAR.a in Frameworks */,
+				322712E95F204E6869CE38D0 /* libPods-HereYouAR.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4699EAC74D1D94E961377A3 /* libPods-HereYouARTests.a in Frameworks */,
+				761D1E095A1CE8A739AAF1AD /* libPods-HereYouARTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +157,7 @@
 				340B230F2363A43300433E6A /* HereYouARTests */,
 				340B22F72363A43100433E6A /* Products */,
 				F35021F99BC726C4CBEFEEDF /* Pods */,
-				9EC9DB45D92387939DED140B /* Frameworks */,
+				C472AB9366154C3DAE292DF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,11 +298,11 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
-		9EC9DB45D92387939DED140B /* Frameworks */ = {
+		C472AB9366154C3DAE292DF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				35C85BA495138D486232AA9C /* libPods-HereYouAR.a */,
-				EF7B61119AF829DF8C105B82 /* libPods-HereYouARTests.a */,
+				73160F03C5B0199CFBDC09A6 /* libPods-HereYouAR.a */,
+				5A3E2A32133DD2543EC31EBC /* libPods-HereYouARTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -310,10 +310,10 @@
 		F35021F99BC726C4CBEFEEDF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B4A474193F3F7ACE811AF41E /* Pods-HereYouAR.debug.xcconfig */,
-				995F57510D94EE613EDD42FB /* Pods-HereYouAR.release.xcconfig */,
-				F5C313EF92B397B1979E8713 /* Pods-HereYouARTests.debug.xcconfig */,
-				F85D5B2BF353108CA1B90391 /* Pods-HereYouARTests.release.xcconfig */,
+				149231CD4DF9BA5246C0A1DF /* Pods-HereYouAR.debug.xcconfig */,
+				87C5CC62F8E95E15471AE0A3 /* Pods-HereYouAR.release.xcconfig */,
+				81513E2CF787C98255A93E2E /* Pods-HereYouARTests.debug.xcconfig */,
+				FD687613A995F4B51A7F4057 /* Pods-HereYouARTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -325,11 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 340B23152363A43300433E6A /* Build configuration list for PBXNativeTarget "HereYouAR" */;
 			buildPhases = (
-				4FCFDD66B0A16E93B4461A50 /* [CP] Check Pods Manifest.lock */,
+				E69F1E6228D1676D117575C7 /* [CP] Check Pods Manifest.lock */,
 				340B22F22363A43100433E6A /* Sources */,
 				340B22F32363A43100433E6A /* Frameworks */,
 				340B22F42363A43100433E6A /* Resources */,
-				B0D8E958950D24816A6F4A5E /* [CP] Embed Pods Frameworks */,
+				B401F2FB4F1BFE28AE878CFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,7 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 340B23182363A43300433E6A /* Build configuration list for PBXNativeTarget "HereYouARTests" */;
 			buildPhases = (
-				3F69A341FD014389AC6CFC74 /* [CP] Check Pods Manifest.lock */,
+				B395AB87234BD3262D747A8B /* [CP] Check Pods Manifest.lock */,
 				340B23082363A43300433E6A /* Sources */,
 				340B23092363A43300433E6A /* Frameworks */,
 				340B230A2363A43300433E6A /* Resources */,
@@ -423,7 +423,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3F69A341FD014389AC6CFC74 /* [CP] Check Pods Manifest.lock */ = {
+		B395AB87234BD3262D747A8B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,7 +445,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4FCFDD66B0A16E93B4461A50 /* [CP] Check Pods Manifest.lock */ = {
+		B401F2FB4F1BFE28AE878CFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HereYouAR/Pods-HereYouAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HereYouAR/Pods-HereYouAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HereYouAR/Pods-HereYouAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E69F1E6228D1676D117575C7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -465,23 +482,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0D8E958950D24816A6F4A5E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HereYouAR/Pods-HereYouAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HereYouAR/Pods-HereYouAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HereYouAR/Pods-HereYouAR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -679,11 +679,12 @@
 		};
 		340B23162363A43300433E6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4A474193F3F7ACE811AF41E /* Pods-HereYouAR.debug.xcconfig */;
+			baseConfigurationReference = 149231CD4DF9BA5246C0A1DF /* Pods-HereYouAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H88S352P5;
+				DEVELOPMENT_TEAM = 7L24699FZV;
 				INFOPLIST_FILE = HereYouAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -691,6 +692,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "texno-gipsy.HereYouAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,11 +700,12 @@
 		};
 		340B23172363A43300433E6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 995F57510D94EE613EDD42FB /* Pods-HereYouAR.release.xcconfig */;
+			baseConfigurationReference = 87C5CC62F8E95E15471AE0A3 /* Pods-HereYouAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7H88S352P5;
+				DEVELOPMENT_TEAM = 7L24699FZV;
 				INFOPLIST_FILE = HereYouAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -710,6 +713,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "texno-gipsy.HereYouAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -717,7 +721,7 @@
 		};
 		340B23192363A43300433E6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5C313EF92B397B1979E8713 /* Pods-HereYouARTests.debug.xcconfig */;
+			baseConfigurationReference = 81513E2CF787C98255A93E2E /* Pods-HereYouARTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -740,7 +744,7 @@
 		};
 		340B231A2363A43300433E6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F85D5B2BF353108CA1B90391 /* Pods-HereYouARTests.release.xcconfig */;
+			baseConfigurationReference = FD687613A995F4B51A7F4057 /* Pods-HereYouARTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
