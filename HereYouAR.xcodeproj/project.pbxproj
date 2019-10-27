@@ -72,11 +72,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0675675F1261C61D4803561B /* Pods-HereYouAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.debug.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.debug.xcconfig"; sourceTree = "<group>"; };
 		124AE69523654AF100D5AFEC /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCentrationButton.swift; sourceTree = "<group>"; };
 		12597A9E2365100E004FD4F0 /* EventSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSearchModel.swift; sourceTree = "<group>"; };
-		149231CD4DF9BA5246C0A1DF /* Pods-HereYouAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereYouAR.debug.xcconfig"; path = "Target Support Files/Pods-HereYouAR/Pods-HereYouAR.debug.xcconfig"; sourceTree = "<group>"; };
-		340B22F62363A43100433E6A /* HereYouAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereYouAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		340B22F62363A43100433E6A /* KtoKuda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KtoKuda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B22F92363A43100433E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		340B23022363A43300433E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		340B23052363A43300433E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		340B22F72363A43100433E6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				340B22F62363A43100433E6A /* HereYouAR.app */,
+				340B22F62363A43100433E6A /* KtoKuda.app */,
 				340B230C2363A43300433E6A /* HereYouARTests.xctest */,
 			);
 			name = Products;
@@ -316,10 +316,10 @@
 		F35021F99BC726C4CBEFEEDF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				149231CD4DF9BA5246C0A1DF /* Pods-HereYouAR.debug.xcconfig */,
 				87C5CC62F8E95E15471AE0A3 /* Pods-HereYouAR.release.xcconfig */,
 				81513E2CF787C98255A93E2E /* Pods-HereYouARTests.debug.xcconfig */,
 				FD687613A995F4B51A7F4057 /* Pods-HereYouARTests.release.xcconfig */,
+				0675675F1261C61D4803561B /* Pods-HereYouAR.debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 			);
 			name = HereYouAR;
 			productName = HereYouAR;
-			productReference = 340B22F62363A43100433E6A /* HereYouAR.app */;
+			productReference = 340B22F62363A43100433E6A /* KtoKuda.app */;
 			productType = "com.apple.product-type.application";
 		};
 		340B230B2363A43300433E6A /* HereYouARTests */ = {
@@ -687,20 +687,19 @@
 		};
 		340B23162363A43300433E6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 149231CD4DF9BA5246C0A1DF /* Pods-HereYouAR.debug.xcconfig */;
+			baseConfigurationReference = 0675675F1261C61D4803561B /* Pods-HereYouAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7L24699FZV;
+				DEVELOPMENT_TEAM = 7H88S352P5;
 				INFOPLIST_FILE = HereYouAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "texno-gipsy.HereYouAR";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = KtoKuda;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -713,15 +712,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7L24699FZV;
+				DEVELOPMENT_TEAM = 7H88S352P5;
 				INFOPLIST_FILE = HereYouAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "texno-gipsy.HereYouAR";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = KtoKuda;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
