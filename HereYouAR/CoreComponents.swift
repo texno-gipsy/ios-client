@@ -27,6 +27,6 @@ class CoreComponents {
         tagCollectionModel = TagCollectionModel(eventCollectionModel: eventCollectionModel)
 
         avatarCollectionModel = AvatarCollectionModel()
-        eventSearchModel = EventSearchModel(eventCollectionModel)
+        eventSearchModel = EventSearchModel(eventCollectionModel:eventCollectionModel, tagCollectionModel:tagCollectionModel)
     }
 }

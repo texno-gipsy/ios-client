@@ -67,6 +67,13 @@ class MapView: TK.View<CALayer> {
             return
         }
         
+        let events = eventSearchModel.getEvents(minLongitude: currentLongitude-4,
+                                                maxLongitude: currentLongitude+4,
+                                                minLatitude: currentLattitude-4,
+                                                maxLattitude: currentLattitude+4)
+        print(currentLattitude, currentLongitude)
+        print(events)
+        addEvents(events: events)
         setCenterToCurrentPosition()
         
     }
@@ -103,8 +110,10 @@ class MapView: TK.View<CALayer> {
     }
     
     func addEvent(event: Event) {
-        mapView.add(mapObject: NMAMapMarker(geoCoordinates: NMAGeoCoordinates(latitude: event.latitude,
-                                                                              longitude: event.longitude)))
+        mapEvents.append(NMAMapMarker(geoCoordinates: NMAGeoCoordinates(latitude: event.latitude,
+                                                                        longitude: event.longitude),
+                                      image: UIImage(systemName: "mappin")!))
+        mapView.add(mapObject: mapEvents.last!)
     }
     func addEvents(events: [Event]) {
         for event in events {
