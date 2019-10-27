@@ -31,14 +31,14 @@ class TagView: TK.View<CALayer> {
     func setupSubviews() {
         nameLabel = UILabel()
         nameLabel.textAlignment = .center
-        nameLabel.font = Resources.Fonts.museoSans700(14)
+        nameLabel.font = Resources.Fonts.museoSans700(16)
         addSubview(nameLabel)
 
         setNeedsUpdateConstraints()
     }
 
     override func updateConstraints() {
-        layoutMargins = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
+        layoutMargins = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
         nameLabel.snp.updateConstraints {
             $0.edges.equalTo(layoutMarginsGuide)
         }
