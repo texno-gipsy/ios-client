@@ -31,7 +31,7 @@ class UserViewCell: UICollectionViewCell {
     }
 
     override func updateConstraints() {
-        layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        layoutMargins = .zero
         userView.snp.updateConstraints {
             $0.edges.equalTo(contentView.layoutMarginsGuide)
         }
@@ -40,10 +40,9 @@ class UserViewCell: UICollectionViewCell {
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        let newLayoutAttributes = layoutAttributes
-//        var newBounds = newLayoutAttributes.bounds
-//        newBounds.size. = 200
-        newLayoutAttributes.bounds.size.height = 200
-        return newLayoutAttributes
+        let attributes = super.preferredLayoutAttributesFitting(layoutAttributes)
+        let size = self.contentView.systemLayoutSizeFitting(layoutAttributes.bounds.size, withHorizontalFittingPriority: .required, verticalFittingPriority: .defaultLow)
+        attributes.bounds.size = size
+        return attributes
     }
 }

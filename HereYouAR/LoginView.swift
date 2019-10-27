@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginView: TK.View<CALayer> {
+class LoginView: TK.FancyView {
 
     // Deps:
     lazy var profileModel = AppComponents.shared.coreComponents.profileModel
@@ -20,8 +20,8 @@ class LoginView: TK.View<CALayer> {
 
     var userSubscriptionDisposable: TK.Disposable.Scoped?
 
-    init() {
-        super.init(frame: .zero)
+    override init() {
+        super.init()
 
         backgroundColor = .white
 
@@ -29,23 +29,27 @@ class LoginView: TK.View<CALayer> {
         setupBindings()
     }
 
-    func setupSubviews() {
+    override func setupSubviews() {
+        super.setupSubviews()
+
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10.0
         layout.minimumInteritemSpacing = 10.0
-//        layout.estimatedItemSize = CGSize(width: 100, height: 100)
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UserViewCell.self, forCellWithReuseIdentifier: "UserViewCell")
         collectionView.backgroundColor = nil
-        addSubview(collectionView)
+        containerView.addSubview(collectionView)
 
         setNeedsUpdateConstraints()
     }
 
     func setupBindings() {
+        titleView.titleLabel.text = "Login"
+        titleView.isHidden = false
         userCollectionModel.refresh()
         userSubscriptionDisposable = userCollectionModel.eventSender.subscribe { [weak self] _ in
             guard let self = self else { return }
@@ -55,9 +59,9 @@ class LoginView: TK.View<CALayer> {
 
 
     override func updateConstraints() {
-        layoutMargins = .zero
+        containerView.layoutMargins = .zero
         collectionView.snp.updateConstraints {
-            $0.edges.equalTo(layoutMarginsGuide)
+            $0.edges.equalTo(containerView.layoutMarginsGuide)
         }
 
         super.updateConstraints()
@@ -80,7 +84,7 @@ extension LoginView: UICollectionViewDelegate {
 
 extension LoginView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let side = collectionView.frame.size.width * 0.5
+        let side = collectionView.frame.size.width * 0.45
         return CGSize(width: side, height: side)
     }
 }
@@ -96,25 +100,5 @@ extension LoginView: UICollectionViewDataSource {
         cell.userView.user = userCollectionModel.users[indexPath.item]
 
         return cell
-
-//        cell.imageView.image = PriceInfoGenerator.icon(by: indexPath.item)
-//
-//        let color = PriceInfoGenerator.color(by: indexPath.item)
-//        cell.backgroundColorView.backgroundColor = color
-//        cell.backgroundColorView.layer.shadowColor = color.cgColor
-//
-//        if let price = info?.prices[indexPath.item] {
-//            cell.titleLabel.text = String(format: Resources.Strings.UserClicks.xMonths, price.monthsCount)
-//            cell.descriptionLabel.text = CurrencyFormatter.formattedString(for: Models.BalanceV2(cents: price.amount.cents, currency: price.amount.currency))
-//            cell.discountLabel.model = CorneredLabel.Model(backgroundColor: .white,
-//                                                                         textColor: color,
-//                                                                         text: String(format: Resources.Strings.UserClicks.saveFormat, Int(price.discountPercentage)))
-//            cell.discountLabel.isHidden = price.discountPercentage == 0.0
-//        } else {
-//            cell.titleLabel.text = nil
-//            cell.descriptionLabel.text = nil
-//            cell.discountLabel.model = nil
-//            cell.discountLabel.isHidden = true
-//        }
     }
 }

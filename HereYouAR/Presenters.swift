@@ -144,7 +144,9 @@ extension BottomSheetPresenter {
             }
 
             self.contentView.snp.remakeConstraints() {
-                $0.leading.bottom.trailing.equalTo(0)
+                $0.bottom.equalTo(0)
+                $0.leading.equalTo(20)
+                $0.trailing.equalTo(-20)
             }
         }
 
@@ -177,10 +179,10 @@ extension TK {
             completion()
 
             view.alpha = 0.0
-            view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+//            view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
             UIView.animate(withDuration: 0.3, animations: {
                 view.alpha = 1.0
-                view.transform = .identity
+//                view.transform = .identity
             }) { (_) in }
 
             return TK.Disposable.Base {
@@ -189,7 +191,7 @@ extension TK {
                 view.alpha = 1.0
                 UIView.animate(withDuration: 0.3, animations: {
                     view.alpha = 0.0
-                    view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+//                    view.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
                 }) { _ in view.removeFromSuperview() }
             }
         }
