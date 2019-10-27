@@ -13,6 +13,7 @@ class CoreComponents {
     let profileModel: ProfileModel
     let userCollectionModel: UserCollectionModel
     let eventCollectionModel: EventCollectionModel
+    let eventSearchModel: EventSearchModel
     let tagCollectionModel: TagCollectionModel
     let avatarCollectionModel: AvatarCollectionModel
 
@@ -26,5 +27,6 @@ class CoreComponents {
         tagCollectionModel = TagCollectionModel(eventCollectionModel: eventCollectionModel)
 
         avatarCollectionModel = AvatarCollectionModel()
+        eventSearchModel = EventSearchModel(eventCollectionModel:eventCollectionModel, tagCollectionModel:tagCollectionModel)
     }
 }
