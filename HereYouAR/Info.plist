@@ -51,5 +51,14 @@
 	<string>Need it</string>
 	<key>NSMotionUsageDescription</key>
 	<string>This is needed to determine your current location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>exljbris - MuseoSansCyrl-100.otf</string>
+		<string>exljbris - MuseoSansCyrl-300.otf</string>
+		<string>exljbris - MuseoSansCyrl-500.otf</string>
+		<string>exljbris - MuseoSansCyrl-700.otf</string>
+		<string>exljbris - MuseoSansCyrl-900.otf</string>
+		<string>SF-UI-Text-Bold.otf</string>
+	</array>
 </dict>
 </plist>

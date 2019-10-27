@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 enum TK {}
 
@@ -46,6 +47,7 @@ extension TK {
     typealias DefaultView = View<CALayer>
 
     class View<LayerT>: UIView where LayerT: CALayer {
+        
         override init(frame: CGRect) {
             super.init(frame: frame)
         }
@@ -69,6 +71,98 @@ extension TK {
             case activating
             case active
             case deactivating
+        }
+    }
+}
+
+extension TK {
+    class TitleView: DefaultView {
+        var titleLabel: UILabel!
+
+        init() {
+            super.init(frame: .zero)
+
+            setupSubviews()
+        }
+
+        func setupSubviews() {
+            titleLabel = UILabel()
+            titleLabel.font = Resources.Fonts.museoSans900(24)
+            addSubview(titleLabel)
+
+            setNeedsUpdateConstraints()
+        }
+
+        override func updateConstraints() {
+            layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+            titleLabel.snp.updateConstraints {
+                $0.edges.equalTo(layoutMarginsGuide)
+            }
+            super.updateConstraints()
+        }
+    }
+}
+
+extension TK {
+    class FancyView: DefaultView {
+        var containerView: UIView!
+        var titleView: TitleView!
+        var stackView: UIStackView!
+        var actionButton: UIButton!
+
+        let disposeBag = DisposeBag()
+
+        var onAction: (() -> Void)?
+
+        init() {
+            super.init(frame: .zero)
+
+            setupSubviews()
+        }
+
+        func setupSubviews() {
+            stackView = UIStackView()
+            stackView.spacing = 8.0
+            stackView.axis = .vertical
+            stackView.alignment = .fill
+            addSubview(stackView)
+
+            titleView = TK.TitleView()
+            titleView.isHidden = true
+            stackView.addArrangedSubview(titleView)
+
+            containerView = UIView()
+            stackView.addArrangedSubview(containerView)
+
+            actionButton = UIButton(type: .system)
+            actionButton.titleLabel?.font = Resources.Fonts.museoSans900(24.0)
+            actionButton.layer.cornerRadius = 8.0
+            actionButton.setTitleColor(.black, for: .normal)
+            actionButton.backgroundColor = Resources.Colors.accentColor
+            actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+            actionButton.isHidden = true
+            actionButton.animateWhenPressed(disposeBag: disposeBag)
+            stackView.addArrangedSubview(actionButton)
+
+            setNeedsUpdateConstraints()
+        }
+
+        override func updateConstraints() {
+            layoutMargins = .zero
+
+            actionButton.snp.updateConstraints {
+                $0.leading.trailing.equalTo(containerView.layoutMarginsGuide)
+                $0.height.equalTo(40)
+            }
+
+            stackView.snp.updateConstraints {
+                $0.edges.equalTo(layoutMarginsGuide)
+            }
+            super.updateConstraints()
+        }
+
+        @objc func actionButtonTapped() {
+            onAction!()
         }
     }
 }

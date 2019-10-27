@@ -21,6 +21,7 @@ class MainView: TK.DefaultView {
     var onUserViewTap: (() -> Void)!
 
     var mapView: MapView!
+    var tagListView: TagListView!
     var userView: UserView!
     var addEventButton: AddEventButton!
     var geoCentrationButton: GeoCentrationButton!
@@ -43,9 +44,12 @@ class MainView: TK.DefaultView {
         addSubview(addEventButton)
         addSubview(geoCentrationButton)
 
-        userView = UserView()
+        tagListView = TagListView()
+        addSubview(tagListView)
 
+        userView = UserView()
         userView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
+        userView.nameLabel.isHidden = true
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(userViewTapped))
         styler.applyMapStyle(to: userView)
         userView.addGestureRecognizer(tapGR)
@@ -66,9 +70,13 @@ class MainView: TK.DefaultView {
     }
 
     override func updateConstraints() {
-        layoutMargins = .zero
+        layoutMargins = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
         mapView.snp.updateConstraints {
             $0.edges.equalTo(0)
+        }
+
+        tagListView.snp.updateConstraints {
+            $0.top.leading.trailing.equalTo(layoutMarginsGuide)
         }
 
         addEventButton.snp.updateConstraints {
@@ -81,11 +89,19 @@ class MainView: TK.DefaultView {
             $0.bottom.equalTo(layoutMarginsGuide).offset(-27)
         }
 
+        userView.layoutMargins = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
         userView.snp.updateConstraints {
-            $0.top.trailing.equalTo(layoutMarginsGuide)
+            $0.trailing.equalTo(0)
+            $0.centerY.equalTo(addEventButton)
         }
 
         super.updateConstraints()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        userView.layer.cornerRadius = userView.bounds.size.width * 0.5
     }
 
 //    func showAccessories(completion: @escaping () -> Void = {}) -> TK.Disposable.Base {
