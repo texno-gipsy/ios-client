@@ -21,16 +21,19 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
     // Deps:
 
     var mapView: NMAMapView!
+    var eventView: EventView!
     
     lazy var eventSearchModel = AppComponents.shared.coreComponents.eventSearchModel
-    var mapEvents: [NMAMapObject] = []
+    var mapEvents: [NMAMapObject: Event] = [:]
     var currentLattitude: Double = 0
     var currentLongitude: Double = 0
+    var onEventTap: (() -> Void)!
 
     init() {
         super.init(frame: .zero)
 
         NMAApplicationContext.setAppId(credentials.appId, appCode: credentials.appCode, licenseKey: credentials.licenseKey)
+        
 
         setupSubviews()
         setupBindings()
@@ -40,9 +43,13 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
         mapView = NMAMapView()
         mapView.gestureDelegate = self
         addSubview(mapView)
+        
+        eventView = EventView()
+        addSubview(eventView)
 
         setNeedsUpdateConstraints()
     }
+    
     
     func setCenterToCurrentPosition() {
         let geoCoodCenter = NMAGeoCoordinates(latitude: currentLattitude,
@@ -84,11 +91,14 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
         //calculate geoCoordinates of tap gesture
         guard let markerCoordinates = mapView.geoCoordinates(from: location) else { return }
         let markerPoint = mapView.point(from: markerCoordinates)
-        for event in mapEvents {
-            if let eventLocation = event.location() {
-                let eventPoint = mapView.point(from: eventLocation)
-                if abs(eventPoint.x - markerPoint.x) < 20 && abs(eventPoint.y - markerPoint.y) < 20 {
+        for (mapEvent, event) in mapEvents
+        {
+            if let mapEventLocation = mapEvent.location() {
+                let mapEventPoint = mapView.point(from: mapEventLocation)
+                if abs(mapEventPoint.x - markerPoint.x) < 20 && abs(mapEventPoint.y - markerPoint.y) < 20 {
                     print(event)
+                    eventView.event = event
+                    onEventTap()
                     break
                 }
             }
@@ -120,17 +130,18 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
     }
     
     func clearEvents() {
-        for mapEvent in self.mapEvents {
+        for mapEvent in self.mapEvents.keys {
             mapView.remove(mapObject: mapEvent)
         }
-        self.mapEvents = []
+        self.mapEvents = [:]
     }
     
     func addEvent(event: Event) {
-        mapEvents.append(NMAMapMarker(geoCoordinates: NMAGeoCoordinates(latitude: event.latitude,
-                                                                        longitude: event.longitude),
-                                      image: UIImage(systemName: "mappin")!))
-        mapView.add(mapObject: mapEvents.last!)
+        let mapEvent = NMAMapMarker(geoCoordinates: NMAGeoCoordinates(latitude: event.latitude,
+                                          longitude: event.longitude),
+        image: UIImage(systemName: "mappin")!)
+        mapEvents[mapEvent] = event
+        mapView.add(mapObject: mapEvent)
     }
     func addEvents(events: [Event]) {
         for event in events {

@@ -19,6 +19,7 @@ class UIComponents {
     lazy var mainView = MainView()
     lazy var loginView = LoginView()
     lazy var profileView = ProfileView()
+//    lazy var eventView = EventView()
 
     lazy var styler = UIStyler()
 }

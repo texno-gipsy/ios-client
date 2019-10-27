@@ -18,6 +18,8 @@ final class AppController {
     var loginView: LoginView?
     var mainView: MainView?
     var profileView: ProfileView?
+    var eventView: EventView?
+    var mapView: MapView?
 
     var bottomSheetPresenter: BottomSheetPresenter?
 
@@ -53,6 +55,13 @@ final class AppController {
             guard let self = self else { return }
             self.showProfileView()
         }
+        
+        mapView = mainView?.mapView
+        mapView?.onEventTap = { [weak self] in
+            guard let self = self else { return }
+            self.showEventView()
+        }
+       
 
         let presenter = TK.Presenter()
         _ = presenter.show(view: mainView!, on: rootVC!.view)
@@ -61,9 +70,11 @@ final class AppController {
     func showProfileView() {
         profileView = uiComponents.profileView
         showInBottomSheet(profileView!)
-
-//        let presenter = TK.Presenter()
-//        _ = presenter.show(view: profileView!, on: rootVC!.view)
+    }
+    
+    func showEventView() {
+        eventView = mapView?.eventView
+        showInBottomSheet(eventView!)
     }
 
     func showInBottomSheet(_ view: TK.DefaultView) {
