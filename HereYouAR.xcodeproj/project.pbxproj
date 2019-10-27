@@ -63,7 +63,7 @@
 		124AE69523654AF100D5AFEC /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCentrationButton.swift; sourceTree = "<group>"; };
 		12597A9E2365100E004FD4F0 /* EventSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSearchModel.swift; sourceTree = "<group>"; };
-		340B22F62363A43100433E6A /* HereYouAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereYouAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		340B22F62363A43100433E6A /* KtoKuda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KtoKuda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B22F92363A43100433E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		340B23022363A43300433E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		340B23052363A43300433E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		340B22F72363A43100433E6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				340B22F62363A43100433E6A /* HereYouAR.app */,
+				340B22F62363A43100433E6A /* KtoKuda.app */,
 				340B230C2363A43300433E6A /* HereYouARTests.xctest */,
 			);
 			name = Products;
@@ -283,7 +283,7 @@
 			);
 			name = HereYouAR;
 			productName = HereYouAR;
-			productReference = 340B22F62363A43100433E6A /* HereYouAR.app */;
+			productReference = 340B22F62363A43100433E6A /* KtoKuda.app */;
 			productType = "com.apple.product-type.application";
 		};
 		340B230B2363A43300433E6A /* HereYouARTests */ = {
@@ -626,7 +626,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "texno-gipsy.HereYouAR";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KtoKuda;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,7 +645,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "texno-gipsy.HereYouAR";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KtoKuda;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
