@@ -36,6 +36,7 @@ class EventView: TK.View<CALayer> {
         titleLabel = UILabel()
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 50)
         addSubview(titleLabel)
         
         descriptionLabel = UILabel()
@@ -50,7 +51,7 @@ class EventView: TK.View<CALayer> {
         layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
         titleLabel.snp.updateConstraints {
-            $0.top.equalTo(layoutMarginsGuide.snp.top).offset(-700)
+            $0.top.equalTo(layoutMarginsGuide.snp.top).offset(-1400)
             $0.leading.trailing.equalTo(layoutMarginsGuide).priority(999)
             $0.bottom.equalTo(layoutMarginsGuide).priority(999)
         }
