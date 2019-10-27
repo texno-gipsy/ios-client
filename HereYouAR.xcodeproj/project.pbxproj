@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12597A9F2365100E004FD4F0 /* EventSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12597A9E2365100E004FD4F0 /* EventSearchModel.swift */; };
+		12597A9D236508BC004FD4F0 /* GeoCentrationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */; };
 		340B22FA2363A43100433E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B22F92363A43100433E6A /* AppDelegate.swift */; };
 		340B23032363A43300433E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340B23022363A43300433E6A /* Assets.xcassets */; };
 		340B23062363A43300433E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340B23042363A43300433E6A /* LaunchScreen.storyboard */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		12597A9E2365100E004FD4F0 /* EventSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSearchModel.swift; sourceTree = "<group>"; };
+		12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCentrationButton.swift; sourceTree = "<group>"; };
 		340B22F62363A43100433E6A /* HereYouAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereYouAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B22F92363A43100433E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		340B23022363A43300433E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				342246DF23649EB7003177E1 /* UserView.swift */,
 				342246E12364A215003177E1 /* UserViewCell.swift */,
 				34E98E6123647BBD009096EB /* AddEventButton.swift */,
+				12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				342246E62364A7E2003177E1 /* UniqueTokenGenerator.swift in Sources */,
 				342246E22364A215003177E1 /* UserViewCell.swift in Sources */,
 				342246F02364E188003177E1 /* TagListView.swift in Sources */,
+				12597A9D236508BC004FD4F0 /* GeoCentrationButton.swift in Sources */,
 				340B233A2363B8DD00433E6A /* Utils.Common.swift in Sources */,
 				340B22FA2363A43100433E6A /* AppDelegate.swift in Sources */,
 				34E98E6223647BBD009096EB /* AddEventButton.swift in Sources */,

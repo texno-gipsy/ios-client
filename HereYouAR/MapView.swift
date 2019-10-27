@@ -24,6 +24,8 @@ class MapView: TK.View<CALayer> {
     
     lazy var eventSearchModel = AppComponents.shared.coreComponents.eventSearchModel
     var mapEvents: [NMAMapObject] = []
+    var currentLattitude: Double = 0
+    var currentLongitude: Double = 0
 
     init() {
         super.init(frame: .zero)
@@ -40,18 +42,40 @@ class MapView: TK.View<CALayer> {
 
         setNeedsUpdateConstraints()
     }
+    
+    func setCenterToCurrentPosition() {
+        let geoCoodCenter = NMAGeoCoordinates(latitude: currentLattitude,
+                                              longitude: currentLongitude)
+        mapView.set(geoCenter: geoCoodCenter, animation: .none)
+    }
+    
+    @objc func didUpdatePosition() {
+        guard let position = NMAPositioningManager.sharedInstance().currentPosition else {
+            return
+        }
+        
+        guard let coordinates = position.coordinates else {
+            return
+        }
+        
+        let distanceScore = abs(coordinates.latitude - currentLattitude) + abs(coordinates.longitude - currentLongitude)
+        
+        currentLattitude = coordinates.latitude
+        currentLongitude = coordinates.longitude
+        
+        if distanceScore < 0.1 {
+            return
+        }
+        
+        setCenterToCurrentPosition()
+        
+    }
 
     func setupBindings() {
         NMAPositioningManager.sharedInstance().dataSource = NMAHEREPositionSource()
 
-        // Set initial position
-        struct Defaults {
-            static let latitude = 61.494713
-            static let longitude = 23.775360
-        }
-
-        let geoCoodCenter = NMAGeoCoordinates(latitude: Defaults.latitude,
-                                              longitude: Defaults.longitude)
+        let geoCoodCenter = NMAGeoCoordinates(latitude: currentLattitude,
+                                              longitude: currentLongitude)
         mapView.set(geoCenter: geoCoodCenter, animation: .none)
         mapView.copyrightLogoPosition = .center
 
@@ -59,10 +83,10 @@ class MapView: TK.View<CALayer> {
         mapView.zoomLevel = NMAMapViewMaximumZoomLevel - 1
 
         // Subscribe to position updates
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(MainViewController.didUpdatePosition),
-//                                               name: NSNotification.Name.NMAPositioningManagerDidUpdatePosition,
-//                                               object: NMAPositioningManager.sharedInstance())
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didUpdatePosition),
+                                               name: NSNotification.Name.NMAPositioningManagerDidUpdatePosition,
+                                               object: NMAPositioningManager.sharedInstance())
 
         // Set position indicator visible. Also starts position updates.
         mapView.positionIndicator.isVisible = true
