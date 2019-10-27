@@ -33,9 +33,9 @@ final class EventCollectionModel {
             guard let self = self else { return }
             switch result {
             case .success(let events):
-//                self.events = events
-                self.events = self.eventStubs
-//                self.events.append(contentsOf: events)
+                self.events = events
+//                self.events = self.eventStubs
+                self.events.append(contentsOf: self.eventStubs)
                 print("""
                 //=======================================================
                 Fetched events:

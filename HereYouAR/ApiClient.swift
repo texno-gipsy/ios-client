@@ -49,7 +49,7 @@ class ApiClient {
         return request(
             method: .get,
             urlString: combinedURLString(path: "events"),
-            params: [:],
+            params: ["lat": 55.815375, "lon": 37.575535, "radius": 5],
             encoding: Alamofire.URLEncoding(),
             headers: defaultHeaders) {
                 return self.parser.parse($0)

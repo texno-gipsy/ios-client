@@ -34,7 +34,7 @@ final class TagCollectionModel {
         self.eventCollectionModel = eventCollectionModel
         eventSubscription = eventCollectionModel.eventSender.subscribe { [weak self] _ in
             guard let self = self else { return }
-            self.tags = Set(self.eventCollectionModel.events.flatMap { $0.tags ?? [] })
+            self.tags = Set(self.eventCollectionModel.eventStubs.flatMap { $0.tags ?? [] })
 //            self.tags = Set(self.stubTags)
         }.scoped()
     }

@@ -133,9 +133,11 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
             minLatitude: currentLattitude-4,
             maxLattitude: currentLattitude+4)
 
-        events = events.filter {
-            guard let tags = $0.tags else { return false }
-            return !tagCollectionModel.selectedTags.intersection(tags).isEmpty
+        if tagCollectionModel.selectedTags.count != 0 {
+            events = events.filter {
+                guard let tags = $0.tags else { return false }
+                return !tagCollectionModel.selectedTags.intersection(tags).isEmpty
+            }
         }
         
         clearEvents()
