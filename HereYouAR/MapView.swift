@@ -21,6 +21,9 @@ class MapView: TK.View<CALayer> {
     // Deps:
 
     var mapView: NMAMapView!
+    
+    lazy var eventSearchModel = AppComponents.shared.coreComponents.eventSearchModel
+    var mapEvents: [NMAMapObject] = []
 
     init() {
         super.init(frame: .zero)
@@ -63,6 +66,26 @@ class MapView: TK.View<CALayer> {
 
         // Set position indicator visible. Also starts position updates.
         mapView.positionIndicator.isVisible = true
+        
+        
+        
+    }
+    
+    func clearEvents() {
+        for mapEvent in self.mapEvents {
+            mapView.remove(mapObject: mapEvent)
+        }
+        self.mapEvents = []
+    }
+    
+    func addEvent(event: Event) {
+        mapView.add(mapObject: NMAMapMarker(geoCoordinates: NMAGeoCoordinates(latitude: event.latitude,
+                                                                              longitude: event.longitude)))
+    }
+    func addEvents(events: [Event]) {
+        for event in events {
+            addEvent(event: event)
+        }
     }
 
     override func updateConstraints() {

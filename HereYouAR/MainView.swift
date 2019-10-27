@@ -15,6 +15,7 @@ class MainView: TK.DefaultView {
     // Deps:
     lazy var profileModel = AppComponents.shared.coreComponents.profileModel
     lazy var eventCollectionModel = AppComponents.shared.coreComponents.eventCollectionModel
+    
     lazy var styler = AppComponents.shared.uiComponents.styler
 
     var onUserViewTap: (() -> Void)!
