@@ -12,6 +12,7 @@ class UserView: TK.View<CALayer> {
 
     var avatarImageView: UIImageView!
     var nameLabel: UILabel!
+    var stackView: UIStackView!
 
     var user: User? {
         didSet {
@@ -29,34 +30,33 @@ class UserView: TK.View<CALayer> {
     init() {
         super.init(frame: .zero)
 
+        layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+
         setupSubviews()
     }
 
     func setupSubviews() {
+        stackView = UIStackView()
+        stackView.spacing = 8.0
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        addSubview(stackView)
+
         avatarImageView = UIImageView()
-        addSubview(avatarImageView)
+        stackView.addArrangedSubview(avatarImageView)
 
         nameLabel = UILabel()
-        nameLabel.numberOfLines = 2
+        nameLabel.numberOfLines = 0
         nameLabel.textAlignment = .center
-        addSubview(nameLabel)
+        nameLabel.font = Resources.Fonts.museoSans500(16)
+        stackView.addArrangedSubview(nameLabel)
 
         setNeedsUpdateConstraints()
     }
 
     override func updateConstraints() {
-        layoutMargins = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-        avatarImageView.snp.updateConstraints {
-            let avatarSide = 80
-            $0.size.equalTo(CGSize(width: avatarSide, height: avatarSide))
-            $0.top.leading.trailing.equalTo(layoutMarginsGuide).priority(999)
-            $0.centerX.equalTo(layoutMarginsGuide.snp.centerX)
-        }
-
-        nameLabel.snp.updateConstraints {
-            $0.top.equalTo(avatarImageView.snp.bottom).offset(20.0)
-            $0.leading.trailing.equalTo(layoutMarginsGuide).priority(999)
-            $0.bottom.equalTo(layoutMarginsGuide).priority(999)
+        stackView.snp.updateConstraints {
+            $0.edges.equalTo(layoutMarginsGuide).priority(999)
         }
 
         super.updateConstraints()

@@ -11,10 +11,12 @@ import Alamofire
 import SwiftyJSON
 
 class ApiClient {
+
+    // Deps:
+    lazy var profileModel = AppComponents.shared.coreComponents.profileModel
+
     let baseURL = URL(string: "https://texno-gipsy.herokuapp.com")!
     let parser: ApiParser
-
-    var profileModel: ProfileModel!
 
     init() {
         parser = ApiParser()
@@ -24,13 +26,21 @@ class ApiClient {
         baseURL.appendingPathComponent("api/client/v1/\(path)").absoluteString
     }
 
+    var defaultHeaders: Alamofire.HTTPHeaders {
+        var headers = Alamofire.HTTPHeaders()
+        if let userId = profileModel.credentials?.id {
+            headers["User-ID"] = "\(userId)"
+        }
+        return headers
+    }
+
     func fetchUsers() -> FetchTask<Result<[User], Error>> {
         return request(
             method: .get,
             urlString: combinedURLString(path: "users"),
             params: [:],
             encoding: Alamofire.URLEncoding(),
-            headers: [:]) {
+            headers: defaultHeaders) {
                 return self.parser.parse($0)
             }
     }
@@ -41,7 +51,7 @@ class ApiClient {
             urlString: combinedURLString(path: "events"),
             params: [:],
             encoding: Alamofire.URLEncoding(),
-            headers: [:]) {
+            headers: defaultHeaders) {
                 return self.parser.parse($0)
             }
     }
