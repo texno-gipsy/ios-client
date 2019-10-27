@@ -36,6 +36,16 @@
 		342246F22364E4C3003177E1 /* Presenters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342246F12364E4C3003177E1 /* Presenters.swift */; };
 		342246F42364E55E003177E1 /* UI.Dimmable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342246F32364E55E003177E1 /* UI.Dimmable.swift */; };
 		342246F62364EB51003177E1 /* UIStyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342246F52364EB51003177E1 /* UIStyler.swift */; };
+		342246F82364FD78003177E1 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342246F72364FD78003177E1 /* TagView.swift */; };
+		342246FA2364FD85003177E1 /* TagViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342246F92364FD85003177E1 /* TagViewCell.swift */; };
+		342246FF23653B4E003177E1 /* CollectionViewTagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342246FE23653B4E003177E1 /* CollectionViewTagLayout.swift */; };
+		3422470123655279003177E1 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3422470023655279003177E1 /* Resources.swift */; };
+		342247092365540E003177E1 /* exljbris - MuseoSansCyrl-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 342247032365540E003177E1 /* exljbris - MuseoSansCyrl-900.otf */; };
+		3422470A2365540E003177E1 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 342247042365540E003177E1 /* SF-UI-Text-Bold.otf */; };
+		3422470B2365540E003177E1 /* exljbris - MuseoSansCyrl-100.otf in Resources */ = {isa = PBXBuildFile; fileRef = 342247052365540E003177E1 /* exljbris - MuseoSansCyrl-100.otf */; };
+		3422470C2365540E003177E1 /* exljbris - MuseoSansCyrl-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 342247062365540E003177E1 /* exljbris - MuseoSansCyrl-300.otf */; };
+		3422470D2365540E003177E1 /* exljbris - MuseoSansCyrl-700.otf in Resources */ = {isa = PBXBuildFile; fileRef = 342247072365540E003177E1 /* exljbris - MuseoSansCyrl-700.otf */; };
+		3422470E2365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf in Resources */ = {isa = PBXBuildFile; fileRef = 342247082365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf */; };
 		342B717E2363BCA700979F34 /* UserCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342B717D2363BCA700979F34 /* UserCollectionModel.swift */; };
 		342B71802363BE3300979F34 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342B717F2363BE3200979F34 /* ApiClient.swift */; };
 		34E98E5C2363CD41009096EB /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5B2363CD41009096EB /* AppController.swift */; };
@@ -90,6 +100,16 @@
 		342246F12364E4C3003177E1 /* Presenters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenters.swift; sourceTree = "<group>"; };
 		342246F32364E55E003177E1 /* UI.Dimmable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.Dimmable.swift; sourceTree = "<group>"; };
 		342246F52364EB51003177E1 /* UIStyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyler.swift; sourceTree = "<group>"; };
+		342246F72364FD78003177E1 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		342246F92364FD85003177E1 /* TagViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewCell.swift; sourceTree = "<group>"; };
+		342246FE23653B4E003177E1 /* CollectionViewTagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTagLayout.swift; sourceTree = "<group>"; };
+		3422470023655279003177E1 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		342247032365540E003177E1 /* exljbris - MuseoSansCyrl-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exljbris - MuseoSansCyrl-900.otf"; sourceTree = "<group>"; };
+		342247042365540E003177E1 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
+		342247052365540E003177E1 /* exljbris - MuseoSansCyrl-100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exljbris - MuseoSansCyrl-100.otf"; sourceTree = "<group>"; };
+		342247062365540E003177E1 /* exljbris - MuseoSansCyrl-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exljbris - MuseoSansCyrl-300.otf"; sourceTree = "<group>"; };
+		342247072365540E003177E1 /* exljbris - MuseoSansCyrl-700.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exljbris - MuseoSansCyrl-700.otf"; sourceTree = "<group>"; };
+		342247082365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exljbris - MuseoSansCyrl-500.otf"; sourceTree = "<group>"; };
 		342B717D2363BCA700979F34 /* UserCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionModel.swift; sourceTree = "<group>"; };
 		342B717F2363BE3200979F34 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		34E98E5B2363CD41009096EB /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
@@ -149,11 +169,13 @@
 			children = (
 				340B22F92363A43100433E6A /* AppDelegate.swift */,
 				340B231B2363A55000433E6A /* RootViewController.swift */,
+				3422470023655279003177E1 /* Resources.swift */,
 				342246E92364C981003177E1 /* Utils */,
 				342B71812363C26B00979F34 /* Components */,
 				342246EA2364C9C2003177E1 /* UI */,
 				340B233B2363BAF800433E6A /* Core */,
 				340B23022363A43300433E6A /* Assets.xcassets */,
+				342247022365540E003177E1 /* Fonts */,
 				340B23042363A43300433E6A /* LaunchScreen.storyboard */,
 				340B23072363A43300433E6A /* Info.plist */,
 			);
@@ -175,7 +197,6 @@
 				340B23332363B52900433E6A /* ProfileModel.swift */,
 				340B23232363B16900433E6A /* EventCollectionModel.swift */,
 				342246ED2364DE7E003177E1 /* TagCollectionModel.swift */,
-				342246EF2364E188003177E1 /* TagListView.swift */,
 				342246DB2364820F003177E1 /* NewEventModel.swift */,
 				342B717D2363BCA700979F34 /* UserCollectionModel.swift */,
 				340B232B2363B27E00433E6A /* AvatarCollectionModel.swift */,
@@ -213,15 +234,48 @@
 			isa = PBXGroup;
 			children = (
 				342246D9236481A6003177E1 /* UI.Extensions.swift */,
+				342246FB23650A7D003177E1 /* Tag */,
 				340B231D2363AE7000433E6A /* MainView.swift */,
 				342246E72364C73F003177E1 /* MapView.swift */,
-				342246EB2364CD20003177E1 /* ProfileView.swift */,
+				342246FC23650A87003177E1 /* User */,
 				34E98E5D2363DF2D009096EB /* LoginView.swift */,
-				342246DF23649EB7003177E1 /* UserView.swift */,
-				342246E12364A215003177E1 /* UserViewCell.swift */,
 				34E98E6123647BBD009096EB /* AddEventButton.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		342246FB23650A7D003177E1 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				342246EF2364E188003177E1 /* TagListView.swift */,
+				342246FE23653B4E003177E1 /* CollectionViewTagLayout.swift */,
+				342246F72364FD78003177E1 /* TagView.swift */,
+				342246F92364FD85003177E1 /* TagViewCell.swift */,
+			);
+			name = Tag;
+			sourceTree = "<group>";
+		};
+		342246FC23650A87003177E1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				342246EB2364CD20003177E1 /* ProfileView.swift */,
+				342246DF23649EB7003177E1 /* UserView.swift */,
+				342246E12364A215003177E1 /* UserViewCell.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		342247022365540E003177E1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				342247032365540E003177E1 /* exljbris - MuseoSansCyrl-900.otf */,
+				342247042365540E003177E1 /* SF-UI-Text-Bold.otf */,
+				342247052365540E003177E1 /* exljbris - MuseoSansCyrl-100.otf */,
+				342247062365540E003177E1 /* exljbris - MuseoSansCyrl-300.otf */,
+				342247072365540E003177E1 /* exljbris - MuseoSansCyrl-700.otf */,
+				342247082365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		342B71812363C26B00979F34 /* Components */ = {
@@ -339,8 +393,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3422470B2365540E003177E1 /* exljbris - MuseoSansCyrl-100.otf in Resources */,
 				340B23062363A43300433E6A /* LaunchScreen.storyboard in Resources */,
+				3422470E2365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf in Resources */,
+				3422470C2365540E003177E1 /* exljbris - MuseoSansCyrl-300.otf in Resources */,
 				340B23032363A43300433E6A /* Assets.xcassets in Resources */,
+				3422470D2365540E003177E1 /* exljbris - MuseoSansCyrl-700.otf in Resources */,
+				3422470A2365540E003177E1 /* SF-UI-Text-Bold.otf in Resources */,
+				342247092365540E003177E1 /* exljbris - MuseoSansCyrl-900.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +484,10 @@
 			files = (
 				340B23342363B52900433E6A /* ProfileModel.swift in Sources */,
 				342246EC2364CD20003177E1 /* ProfileView.swift in Sources */,
+				342246F82364FD78003177E1 /* TagView.swift in Sources */,
 				340B23262363B1DF00433E6A /* ApiParser.swift in Sources */,
 				34E98E602363E051009096EB /* UserCredentialCollectionModel.swift in Sources */,
+				342246FF23653B4E003177E1 /* CollectionViewTagLayout.swift in Sources */,
 				342246E023649EB7003177E1 /* UserView.swift in Sources */,
 				34E98E5C2363CD41009096EB /* AppController.swift in Sources */,
 				342246E52364A7E2003177E1 /* EventSender.swift in Sources */,
@@ -442,6 +504,7 @@
 				342246F22364E4C3003177E1 /* Presenters.swift in Sources */,
 				340B232E2363B4AA00433E6A /* AppComponents.swift in Sources */,
 				340B23302363B4BC00433E6A /* CoreComponents.swift in Sources */,
+				342246FA2364FD85003177E1 /* TagViewCell.swift in Sources */,
 				34E98E5E2363DF2D009096EB /* LoginView.swift in Sources */,
 				342246E62364A7E2003177E1 /* UniqueTokenGenerator.swift in Sources */,
 				342246E22364A215003177E1 /* UserViewCell.swift in Sources */,
@@ -452,6 +515,7 @@
 				342246DA236481A6003177E1 /* UI.Extensions.swift in Sources */,
 				342B717E2363BCA700979F34 /* UserCollectionModel.swift in Sources */,
 				340B232C2363B27E00433E6A /* AvatarCollectionModel.swift in Sources */,
+				3422470123655279003177E1 /* Resources.swift in Sources */,
 				340B23382363B5B600433E6A /* Entities.swift in Sources */,
 				340B231E2363AE7000433E6A /* MainView.swift in Sources */,
 			);

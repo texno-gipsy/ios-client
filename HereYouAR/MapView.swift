@@ -47,8 +47,7 @@ class MapView: TK.View<CALayer> {
             static let longitude = 23.775360
         }
 
-        let geoCoodCenter = NMAGeoCoordinates(latitude: Defaults.latitude,
-                                              longitude: Defaults.longitude)
+        let geoCoodCenter = NMAGeoCoordinates(latitude: Defaults.latitude, longitude: Defaults.longitude)
         mapView.set(geoCenter: geoCoodCenter, animation: .none)
         mapView.copyrightLogoPosition = .center
 

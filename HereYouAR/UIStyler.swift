@@ -40,4 +40,6 @@ extension TK {
     }
 
     public static let logoShadow = Shadow(color: UIColor.black, opacity: 0.2, radius: 16.0, offset: CGSize(width: 0.0, height: 1.0))
+
+    public static let accentShadow = Shadow(color: Resources.Colors.accentColor, opacity: 0.5, radius: 12.0, offset: CGSize(width: 0.0, height: 1.0))
 }

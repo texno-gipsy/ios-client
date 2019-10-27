@@ -23,8 +23,11 @@ class AddEventButton: TK.View<CALayer> {
     }
 
     func setupSubviews() {
-        button = UIButton(type: .system)
-        button.setImage(UIImage(named: "add-event-button-icon"), for: .normal)
+        button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "add-event-button-icon")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.tintColor = Resources.Colors.accentColor
+        button.backgroundColor = .white
+        TK.apply(shadow: TK.accentShadow, to: button.layer)
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         button.animateWhenPressed(disposeBag: disposeBag)
         addSubview(button)
@@ -38,6 +41,13 @@ class AddEventButton: TK.View<CALayer> {
         }
 
         super.updateConstraints()
+    }
+
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        button.layer.cornerRadius = bounds.width * 0.5
     }
 
     @objc func buttonTapped() {
