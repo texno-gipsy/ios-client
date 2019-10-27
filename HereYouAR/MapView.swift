@@ -16,7 +16,7 @@ let credentials = (
 )
 
 
-class MapView: TK.View<CALayer> {
+class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
 
     // Deps:
 
@@ -38,6 +38,7 @@ class MapView: TK.View<CALayer> {
 
     func setupSubviews() {
         mapView = NMAMapView()
+        mapView.gestureDelegate = self
         addSubview(mapView)
 
         setNeedsUpdateConstraints()
@@ -76,6 +77,22 @@ class MapView: TK.View<CALayer> {
         addEvents(events: events)
         setCenterToCurrentPosition()
         
+    }
+    
+    func mapView(_ mapView: NMAMapView, didReceiveTapAt location: CGPoint) {
+
+        //calculate geoCoordinates of tap gesture
+        guard let markerCoordinates = mapView.geoCoordinates(from: location) else { return }
+        let markerPoint = mapView.point(from: markerCoordinates)
+        for event in mapEvents {
+            if let eventLocation = event.location() {
+                let eventPoint = mapView.point(from: eventLocation)
+                if abs(eventPoint.x - markerPoint.x) < 20 && abs(eventPoint.y - markerPoint.y) < 20 {
+                    print(event)
+                    break
+                }
+            }
+        }
     }
 
     func setupBindings() {
