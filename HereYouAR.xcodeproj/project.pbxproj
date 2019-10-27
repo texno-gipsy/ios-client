@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12597A9F2365100E004FD4F0 /* EventSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12597A9E2365100E004FD4F0 /* EventSearchModel.swift */; };
 		340B22FA2363A43100433E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B22F92363A43100433E6A /* AppDelegate.swift */; };
 		340B23032363A43300433E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340B23022363A43300433E6A /* Assets.xcassets */; };
 		340B23062363A43300433E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340B23042363A43300433E6A /* LaunchScreen.storyboard */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12597A9E2365100E004FD4F0 /* EventSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSearchModel.swift; sourceTree = "<group>"; };
 		340B22F62363A43100433E6A /* HereYouAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereYouAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B22F92363A43100433E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		340B23022363A43300433E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				342B717D2363BCA700979F34 /* UserCollectionModel.swift */,
 				340B232B2363B27E00433E6A /* AvatarCollectionModel.swift */,
 				34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */,
+				12597A9E2365100E004FD4F0 /* EventSearchModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				340B23342363B52900433E6A /* ProfileModel.swift in Sources */,
+				12597A9F2365100E004FD4F0 /* EventSearchModel.swift in Sources */,
 				342246EC2364CD20003177E1 /* ProfileView.swift in Sources */,
 				340B23262363B1DF00433E6A /* ApiParser.swift in Sources */,
 				34E98E602363E051009096EB /* UserCredentialCollectionModel.swift in Sources */,
@@ -607,7 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7L24699FZV;
+				DEVELOPMENT_TEAM = 7H88S352P5;
 				INFOPLIST_FILE = HereYouAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,7 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7L24699FZV;
+				DEVELOPMENT_TEAM = 7H88S352P5;
 				INFOPLIST_FILE = HereYouAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
