@@ -117,12 +117,13 @@ extension TK {
         init() {
             super.init(frame: .zero)
 
+            backgroundColor = .white
+
             setupSubviews()
         }
 
         func setupSubviews() {
             stackView = UIStackView()
-            stackView.spacing = 8.0
             stackView.axis = .vertical
             stackView.alignment = .fill
             addSubview(stackView)
@@ -137,8 +138,8 @@ extension TK {
             actionButton = UIButton(type: .system)
             actionButton.titleLabel?.font = Resources.Fonts.museoSans900(24.0)
             actionButton.layer.cornerRadius = 8.0
-            actionButton.setTitleColor(.black, for: .normal)
-            actionButton.backgroundColor = Resources.Colors.accentColor
+            actionButton.setTitleColor(.white, for: .normal)
+            actionButton.backgroundColor = Resources.Colors.darkColor
             actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
             actionButton.isHidden = true
             actionButton.animateWhenPressed(disposeBag: disposeBag)
@@ -148,11 +149,9 @@ extension TK {
         }
 
         override func updateConstraints() {
-            layoutMargins = .zero
-
             actionButton.snp.updateConstraints {
-                $0.leading.trailing.equalTo(containerView.layoutMarginsGuide)
-                $0.height.equalTo(40)
+//                $0.leading.trailing.equalTo(containerView.layoutMarginsGuide).inset(UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+                $0.height.equalTo(54)
             }
 
             stackView.snp.updateConstraints {

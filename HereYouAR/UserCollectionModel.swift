@@ -19,6 +19,13 @@ final class UserCollectionModel {
         case dataUpdated
     }
 
+    var usersWithCredentials: [User] {
+        return users.filter {
+            let ids = Set([1, 2, 3, 4])
+            return ids.contains($0.id)
+        }
+    }
+
     var users: [User] = [] {
         didSet {
             eventSender.send(.dataUpdated)

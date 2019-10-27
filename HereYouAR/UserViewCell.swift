@@ -23,7 +23,7 @@ class UserViewCell: UICollectionViewCell {
 
     func setupSubviews() {
         userView = UserView()
-        userView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
+        userView.backgroundColor = Resources.Colors.lightGray
         userView.layer.cornerRadius = 8.0
         contentView.addSubview(userView)
 

@@ -24,6 +24,8 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
     var eventView: EventView!
     
     lazy var eventSearchModel = AppComponents.shared.coreComponents.eventSearchModel
+    lazy var tagCollectionModel = AppComponents.shared.coreComponents.tagCollectionModel
+
     var mapEvents: [NMAMapObject: Event] = [:]
     var currentLattitude: Double = 0
     var currentLongitude: Double = 0
@@ -33,7 +35,6 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
         super.init(frame: .zero)
 
         NMAApplicationContext.setAppId(credentials.appId, appCode: credentials.appCode, licenseKey: credentials.licenseKey)
-        
 
         setupSubviews()
         setupBindings()
@@ -75,15 +76,8 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
             return
         }
         
-        let events = eventSearchModel.getEvents(minLongitude: currentLongitude-4,
-                                                maxLongitude: currentLongitude+4,
-                                                minLatitude: currentLattitude-4,
-                                                maxLattitude: currentLattitude+4)
-        print(currentLattitude, currentLongitude)
-        print(events)
-        addEvents(events: events)
+        update()
         setCenterToCurrentPosition()
-        
     }
     
     func mapView(_ mapView: NMAMapView, didReceiveTapAt location: CGPoint) {
@@ -124,9 +118,28 @@ class MapView: TK.View<CALayer>, NMAMapGestureDelegate {
 
         // Set position indicator visible. Also starts position updates.
         mapView.positionIndicator.isVisible = true
+
+        _ = tagCollectionModel.eventSender.subscribe { [weak self] event in
+            guard let self = self else { return }
+            guard event == .selectedTagsUpdated else { return }
+            self.update()
+        }
+    }
+
+    func update() {
+        var events = eventSearchModel.getEvents(
+            minLongitude: currentLongitude-4,
+            maxLongitude: currentLongitude+4,
+            minLatitude: currentLattitude-4,
+            maxLattitude: currentLattitude+4)
+
+        events = events.filter {
+            guard let tags = $0.tags else { return false }
+            return !tagCollectionModel.selectedTags.intersection(tags).isEmpty
+        }
         
-        
-        
+        clearEvents()
+        addEvents(events: events)
     }
     
     func clearEvents() {

@@ -30,7 +30,7 @@ class TagViewCell: UICollectionViewCell {
 
     func update() {
         guard let tag = tagView.eventTag else { return }
-        if tagCollectionModel.isSelected(tag: tag) {
+        if tagCollectionModel.selectedTags.contains(tag) {
 //            tagView.transform = .init(scaleX: 0.8, y: 0.8)
             tagView.layer.borderColor = UIColor.black.cgColor
             tagView.layer.borderWidth = 2.0

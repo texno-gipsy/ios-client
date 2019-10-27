@@ -69,6 +69,10 @@ final class AppController {
 
     func showProfileView() {
         profileView = uiComponents.profileView
+        profileView?.onAction = { [weak self] in
+            guard let self = self else { return }
+            self.hideFromBottomSheet(self.profileView!)
+        }
         showInBottomSheet(profileView!)
     }
     

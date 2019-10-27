@@ -19,6 +19,7 @@ extension UIColor {
 extension Resources {
     enum Colors {
         static let accentColor = UIColor(54, 220, 213)
+        static let darkColor = UIColor.black
         static let lightGray = UIColor(239, 239, 239)
     }
 

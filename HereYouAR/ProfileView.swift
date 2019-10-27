@@ -44,7 +44,6 @@ class ProfileView: TK.FancyView {
     }
 
     func setupBindings() {
-        onAction = {}
         actionButton.setTitle("Back to Map", for: .normal)
         update()
     }
@@ -60,7 +59,7 @@ class ProfileView: TK.FancyView {
 
         tagListView.snp.updateConstraints {
             $0.top.equalTo(userView.snp.bottom).offset(20.0)
-            $0.height.equalTo(200)
+            $0.height.equalTo(300)
             $0.leading.trailing.equalTo(containerView.layoutMarginsGuide)
             $0.bottom.equalTo(containerView.layoutMarginsGuide).offset(100)
         }

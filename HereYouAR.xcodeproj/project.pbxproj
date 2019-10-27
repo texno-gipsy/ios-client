@@ -52,6 +52,8 @@
 		3422470E2365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf in Resources */ = {isa = PBXBuildFile; fileRef = 342247082365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf */; };
 		342B717E2363BCA700979F34 /* UserCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342B717D2363BCA700979F34 /* UserCollectionModel.swift */; };
 		342B71802363BE3300979F34 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342B717F2363BE3200979F34 /* ApiClient.swift */; };
+		34763C592365722B00119589 /* ProfileTagCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34763C582365722B00119589 /* ProfileTagCollectionModel.swift */; };
+		34763C5B2365818700119589 /* NewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34763C5A2365818700119589 /* NewEventView.swift */; };
 		34E98E5C2363CD41009096EB /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5B2363CD41009096EB /* AppController.swift */; };
 		34E98E5E2363DF2D009096EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5D2363DF2D009096EB /* LoginView.swift */; };
 		34E98E602363E051009096EB /* UserCredentialCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */; };
@@ -119,6 +121,8 @@
 		342247082365540E003177E1 /* exljbris - MuseoSansCyrl-500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exljbris - MuseoSansCyrl-500.otf"; sourceTree = "<group>"; };
 		342B717D2363BCA700979F34 /* UserCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionModel.swift; sourceTree = "<group>"; };
 		342B717F2363BE3200979F34 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		34763C582365722B00119589 /* ProfileTagCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTagCollectionModel.swift; sourceTree = "<group>"; };
+		34763C5A2365818700119589 /* NewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventView.swift; sourceTree = "<group>"; };
 		34E98E5B2363CD41009096EB /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		34E98E5D2363DF2D009096EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		34E98E5F2363E051009096EB /* UserCredentialCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentialCollectionModel.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				340B23332363B52900433E6A /* ProfileModel.swift */,
 				340B23232363B16900433E6A /* EventCollectionModel.swift */,
 				342246ED2364DE7E003177E1 /* TagCollectionModel.swift */,
+				34763C582365722B00119589 /* ProfileTagCollectionModel.swift */,
 				342246DB2364820F003177E1 /* NewEventModel.swift */,
 				342B717D2363BCA700979F34 /* UserCollectionModel.swift */,
 				340B232B2363B27E00433E6A /* AvatarCollectionModel.swift */,
@@ -247,6 +252,7 @@
 				342246FC23650A87003177E1 /* User */,
 				34E98E5D2363DF2D009096EB /* LoginView.swift */,
 				124AE69523654AF100D5AFEC /* EventView.swift */,
+				34763C5A2365818700119589 /* NewEventView.swift */,
 				34E98E6123647BBD009096EB /* AddEventButton.swift */,
 				12597A9C236508BB004FD4F0 /* GeoCentrationButton.swift */,
 			);
@@ -503,6 +509,7 @@
 				342246E52364A7E2003177E1 /* EventSender.swift in Sources */,
 				342246E82364C73F003177E1 /* MapView.swift in Sources */,
 				342246EE2364DE7E003177E1 /* TagCollectionModel.swift in Sources */,
+				34763C592365722B00119589 /* ProfileTagCollectionModel.swift in Sources */,
 				342B71802363BE3300979F34 /* ApiClient.swift in Sources */,
 				342246F62364EB51003177E1 /* UIStyler.swift in Sources */,
 				340B231C2363A55000433E6A /* RootViewController.swift in Sources */,
@@ -528,6 +535,7 @@
 				342B717E2363BCA700979F34 /* UserCollectionModel.swift in Sources */,
 				340B232C2363B27E00433E6A /* AvatarCollectionModel.swift in Sources */,
 				3422470123655279003177E1 /* Resources.swift in Sources */,
+				34763C5B2365818700119589 /* NewEventView.swift in Sources */,
 				340B23382363B5B600433E6A /* Entities.swift in Sources */,
 				340B231E2363AE7000433E6A /* MainView.swift in Sources */,
 			);

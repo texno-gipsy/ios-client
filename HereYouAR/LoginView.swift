@@ -91,13 +91,13 @@ extension LoginView: UICollectionViewDelegateFlowLayout {
 
 extension LoginView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userCollectionModel.users.count
+        return userCollectionModel.usersWithCredentials.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserViewCell", for: indexPath) as? UserViewCell else { TK.fatalError(.shouldNeverBeCalled(nil)) }
 
-        cell.userView.user = userCollectionModel.users[indexPath.item]
+        cell.userView.user = userCollectionModel.usersWithCredentials[indexPath.item]
 
         return cell
     }

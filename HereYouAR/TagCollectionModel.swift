@@ -34,8 +34,8 @@ final class TagCollectionModel {
         self.eventCollectionModel = eventCollectionModel
         eventSubscription = eventCollectionModel.eventSender.subscribe { [weak self] _ in
             guard let self = self else { return }
-//            self.tags = Set(self.eventCollectionModel.events.flatMap { $0.tags ?? [] })
-            self.tags = Set(self.stubTags)
+            self.tags = Set(self.eventCollectionModel.events.flatMap { $0.tags ?? [] })
+//            self.tags = Set(self.stubTags)
         }.scoped()
     }
 
@@ -56,11 +56,7 @@ final class TagCollectionModel {
 //        ["music"].map { Tag(name: $0) }
 //    }()
 
-    private var selectedTags = Set<Tag>()
-
-    func isSelected(tag: Tag) -> Bool {
-        return selectedTags.contains(tag)
-    }
+    var selectedTags = Set<Tag>()
 
     func set(tag: Tag, selected: Bool) {
         if selected {

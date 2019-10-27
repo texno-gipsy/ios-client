@@ -11,6 +11,8 @@ import Foundation
 struct User {
     let id: Int
     let name: String
+    let instagramURL: URL?
+    let tags: [Tag]?
 }
 
 struct Event {

@@ -22,7 +22,8 @@ class ApiParser {
     func parse(_ json: JSON) -> User? {
         guard let id = json["id"].int else { return TK.fallback(nil) }
         guard let name = json["name"].string else { return TK.fallback(nil) }
-        return User(id: id, name: name)
+        let tags = json["tags"].array?.compactMap { parse($0) } as [Tag]?
+        return User(id: id, name: name, instagramURL: nil, tags: tags)
     }
 
     func parse(_ json: JSON) -> [User]? {
